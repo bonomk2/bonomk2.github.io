@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="bonobono">
     <meta name="description" content="description">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,test">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -50,7 +50,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="테스트 포스트 | Bonobono&#39;s Blog">
     <meta property="og:description" content="description">
-    
+    <meta property="og:article:tag" content="test"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -196,7 +196,8 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
     
@@ -243,7 +244,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#안녕-hexo"><span class="post-toc-number">1.</span> <span class="post-toc-text">안녕 hexo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-cool"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">hexo cool</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#really"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">really?</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#안녕-hexo"><span class="post-toc-number">1.</span> <span class="post-toc-text">안녕 hexo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-cool"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">hexo cool</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#really"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">really?</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Front-matter"><span class="post-toc-number">2.</span> <span class="post-toc-text">Front-matter</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#table-sample"><span class="post-toc-number">3.</span> <span class="post-toc-text">table sample</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#pre-tag"><span class="post-toc-number">4.</span> <span class="post-toc-text">pre tag</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -267,10 +268,8 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Pure Thumbnail -->
-            <div class="post_thumbnail-pure mdl-card__media mdl-color-text--grey-50" style="background-color:#00838F !important">
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://www.issuebada.com/files/attach/images/154245/760/604/c52c5bc5cf690adf70a0b18b9911c328.png)">
     
             <p class="article-headline-p">
                 테스트 포스트
@@ -316,7 +315,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/test/">test</a>
     </ul>
     
 
@@ -383,6 +382,21 @@
 <li>with</li>
 <li>markdown</li>
 </ul>
+<h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><p>See front-matter for more information.</p>
+<p>Setting    Description    Default<br>layout    Layout<br>title    Title<br>date    Published date    File created date<br>update    Updated date    File updated date<br>comments    Enables comment feature for the post    true<br>tags    Tags (Not available for pages)<br>categories    Categories (Not available for pages)<br>permalink    Override the default permalink of the post<br>toc    Display TOC button    true<br>comment    Display comment    true<br>notag    Do not generate Tags menu    false<br>top    Pin post on the top of the list</p>
+<h1 id="table-sample"><a href="#table-sample" class="headerlink" title="table sample"></a>table sample</h1><table><br>    <tr><br>        <td>Foo</td><br>    </tr><br></table>
+
+
+<h1 id="pre-tag"><a href="#pre-tag" class="headerlink" title="pre tag"></a>pre tag</h1><pre>
+
+이곳에 소스를 적는것인데 syntax highlight가 정상 동작하는지를 모르겠다는.. ㄷㄷㄷ
+<script>
+    document.write('aaaaa');
+</script>
+
+</pre>
+
+
 
     
 
@@ -394,45 +408,19 @@
 
                 <!-- Post Comments -->
                 
-                    
-
-
-    <!-- 使用 DISQUS -->
-    <div id="disqus-comment">
-        <div id="disqus_thread"></div>
-<script>
-    queue.offer(function() {
-            var disqus_config = function () {
-                this.page.url = 'http://www.bonobono.net/2017/03/08/Test-Post/index.html';  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document;
-                var s = d.createElement('script');
-                s.src = '//comment.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', + new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        });
-</script>
-
-    </div>
-    <style>
-        #disqus-comment{
-            background-color: #eee;
-            padding: 2pc;
-        }
-    </style>
-
-
-
-                
             </div>
 
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2017/03/08/hello-world/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
     
 
     <!-- Section Spacer -->
@@ -440,7 +428,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/03/08/hello-world/" id="post_nav-older" class="next-content">
+        <a href="/2017/03/08/안녕-Hexo/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -523,7 +511,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">7</span></a>
             </ul>
         </li>
         
@@ -541,7 +529,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/test/">test<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/test/">test<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         

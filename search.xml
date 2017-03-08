@@ -4,6 +4,96 @@
   
     
     <entry>
+      <title><![CDATA[Test Private]]></title>
+      <url>http://www.bonobono.net/2017/03/08/Test-Private/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> test </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Test Tag Cloud]]></title>
+      <url>http://www.bonobono.net/2017/03/08/Test-Tag-Cloud/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> test </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Test Gallery]]></title>
+      <url>http://www.bonobono.net/2017/03/08/Test-Gallery/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> test </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Test Links]]></title>
+      <url>http://www.bonobono.net/2017/03/08/Test-Links/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World2]]></title>
+      <url>http://www.bonobono.net/2017/03/08/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<p>한글도 잘 되는지 어디 봅시다~!!</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[테스트 포스트]]></title>
       <url>http://www.bonobono.net/2017/03/08/Test-Post/</url>
       <content type="html"><![CDATA[<h1 id="안녕-hexo"><a href="#안녕-hexo" class="headerlink" title="안녕 hexo"></a>안녕 hexo</h1><h2 id="hexo-cool"><a href="#hexo-cool" class="headerlink" title="hexo cool"></a>hexo cool</h2><h3 id="really"><a href="#really" class="headerlink" title="really?"></a>really?</h3><ul>
@@ -12,6 +102,21 @@
 <li>with</li>
 <li>markdown</li>
 </ul>
+<h1 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h1><p>See front-matter for more information.</p>
+<p>Setting    Description    Default<br>layout    Layout<br>title    Title<br>date    Published date    File created date<br>update    Updated date    File updated date<br>comments    Enables comment feature for the post    true<br>tags    Tags (Not available for pages)<br>categories    Categories (Not available for pages)<br>permalink    Override the default permalink of the post<br>toc    Display TOC button    true<br>comment    Display comment    true<br>notag    Do not generate Tags menu    false<br>top    Pin post on the top of the list</p>
+<h1 id="table-sample"><a href="#table-sample" class="headerlink" title="table sample"></a>table sample</h1><table><br>    <tr><br>        <td>Foo</td><br>    </tr><br></table>
+
+
+<h1 id="pre-tag"><a href="#pre-tag" class="headerlink" title="pre tag"></a>pre tag</h1><pre>
+
+이곳에 소스를 적는것인데 syntax highlight가 정상 동작하는지를 모르겠다는.. ㄷㄷㄷ
+<script>
+    document.write('aaaaa');
+</script>
+
+</pre>
+
+
 ]]></content>
       
         <categories>
@@ -21,23 +126,11 @@
         </categories>
         
         
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World2]]></title>
-      <url>http://www.bonobono.net/2017/03/08/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<p>한글도 잘 되는지 어디 봅시다~!!</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
         
     </entry>
     
