@@ -166,30 +166,6 @@
 
 
 
-<!-- bonobono custom css -->
-<style>
-.video-container {
-  position: relative;
-  padding-top: 56.25%;
-  height: 0;
-  overflow: hidden;
-}
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin-top: 0;
-}
-pre.line-numbers {
-    padding-left: 50px;
-}
-</style>
-
-
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/queue.js"></script>
@@ -221,8 +197,11 @@ pre.line-numbers {
 
     <!-- Custom Head -->
     
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+        
+            <link rel="stylesheet" type="text/css" href="/css/bonobono.css">
+        
+    	
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
     
@@ -453,7 +432,7 @@ console.log(&#39;1111&#39;);
 </li>
 </ul>
 <p>test.js</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript">
+<pre class=" language-javascript"><code class="language-javascript">
 <span class="token comment" spellcheck="true">/** comment **/</span>
 <span class="token comment" spellcheck="true">// comment2</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1111'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -464,7 +443,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">}</span>
 <span class="token function">testA</span><span class="token punctuation">(</span><span class="token string">'aaaa'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 
 
 <h1 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h1><iframe scrolling="no" width="100%" height="300" src="http://jsfiddle.net/pgtkkLsc/embedded/html,result/light" frameborder="0" allowfullscreen></iframe>

@@ -1,0 +1,34 @@
+.video-container {
+	position: relative;
+	padding-top: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+}
+
+#scheme-Paradox .material-layout .material-layout__content {
+	padding-top: 30px;
+}
+@media screen and (max-width:480px) {
+	#scheme-Paradox .material-layout .material-layout__content {
+		padding-top:0;
+	}
+}
+
+#scheme-Paradox .material-layout .mdl-card {
+    min-height: 0px;
+}
+
+#scheme-Paradox #search-form {
+	bottom: 0px;
+	display: block;
+}
