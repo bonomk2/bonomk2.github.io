@@ -14,20 +14,36 @@
 	height: 100%;
 	margin-top: 0;
 }
-
 #scheme-Paradox .material-layout .material-layout__content {
-	padding-top: 80px;
+	padding-top: 60px;
 }
 @media screen and (max-width:480px) {
 	#scheme-Paradox .material-layout .material-layout__content {
-		padding-top:0;
+		padding-top:60px;
 	}
 }
-
+.is-post{
+	padding-top:0px;
+}
+.MD-burger-icon{
+	height:0px;
+}
 #scheme-Paradox .material-layout .mdl-card {
     min-height: 0px;
 }
-
+#scheme-Paradox .material-post_container .material-post>.mdl-card .mdl-card__media, #scheme-Paradox .material-post_container .material-index>.mdl-card .mdl-card__media {
+    height: 170px;
+}
+@media screen and (max-width: 840px) and (min-width: 481px) {
+	#scheme-Paradox .index-top-block {
+		min-height: 0px!important;
+	}
+}
+@media screen and (max-width: 840px) and (min-width: 481px) {
+	#scheme-Paradox .material-layout .something-else {
+		width: calc(100% - 16px);
+	}
+}
 #scheme-Paradox #search-form {
 	bottom: 0px;
 	display: block;

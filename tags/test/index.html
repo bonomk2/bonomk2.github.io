@@ -73,7 +73,7 @@
   }
 
   a {
-    color: #00838F;
+    color: #3F51B5;
   }
 
   .mdl-card__media,
@@ -124,7 +124,7 @@
   }
 
   .post-toc a:hover {
-    color: #00838F;
+    color: #3F51B5;
     text-decoration: underline;
   }
 </style>
@@ -203,14 +203,13 @@
     	
 <link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
-
+	
     
         <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
                 
-
                 <!-- Main Container -->
-                <main class="material-layout__content" id="main">
+                <main class="material-layout__content"  id="main">
 
                     <!-- Top Anchor -->
                     <div id="top"></div>
@@ -224,6 +223,24 @@
 
                     <!-- Index Module -->
 <div class="material-index mdl-grid">
+    
+        <!-- Paradox Header -->
+        <!-- %- partial('_partial/daily_pic') % -->
+        <!-- Blog info -->
+<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--12-col index-top-block">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">	
+        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
+            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
+        </label>
+
+        <form autocomplete="off" id="search-form" class="mdl-textfield__expandable-holder">
+            <input type="text" id="search" class="form-control mdl-textfield__input search-input" name="q" results="0" placeholder=""/>
+            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
+        </form>
+		<div id="local-search-result"></div>
+    </div>
+</div>
+
     
     <div class="locate-thumbnail-symbol"></div>
 
@@ -255,7 +272,7 @@
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/TestCategory/TestCate2/Test-Category/" target="_self">Continue Reading</a>
+            <a href="/TestCategory/TestCate2/Test-Category/" target="_self">more..</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -298,7 +315,7 @@ asset_img : /images/test_04
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/Test-Asset/" target="_self">Continue Reading</a>
+            <a href="/Test-Asset/" target="_self">more..</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -341,7 +358,7 @@ asset_img : /images/test_04
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/Test-Private/" target="_self">Continue Reading</a>
+            <a href="/Test-Private/" target="_self">more..</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -384,7 +401,7 @@ asset_img : /images/test_04
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/Test-Tag-Cloud/" target="_self">Continue Reading</a>
+            <a href="/Test-Tag-Cloud/" target="_self">more..</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -425,7 +442,7 @@ asset_img : /images/test_04
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/Test-Gallery/" target="_self">Continue Reading</a>
+            <a href="/Test-Gallery/" target="_self">more..</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -466,7 +483,7 @@ asset_img : /images/test_04
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/Test-Post/" target="_self">Continue Reading</a>
+            <a href="/Test-Post/" target="_self">more..</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -582,6 +599,16 @@ asset_img : /images/test_04
                     <i class="material-icons sidebar-material-icons">person</i>
                 
                 About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/guestbook" title="Guestbook">
+                
+                    <i class="material-icons sidebar-material-icons">border_color</i>
+                
+                Guestbook
             </a>
         </li>
         
@@ -799,8 +826,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-    <!-- 使用 DISQUS js 代码 -->
-    <script id="dsq-count-scr" src="//comment.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//bonobono-net.disqus.com/count.js" async></script>
 
 
 
