@@ -48,3 +48,10 @@
 	bottom: 0px;
 	display: block;
 }
+.mdl-textfield.is-dirty .mdl-textfield__expandable-holder, .mdl-textfield.is-focused .mdl-textfield__expandable-holder {
+    max-width: 750px;
+}
+.mdl-textfield__expandable-holder {
+	margin-left: 32px;
+	margin-right: 32px;
+}
