@@ -8,101 +8,14 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>description</description>
-    <pubDate>Thu, 09 Mar 2017 17:36:20 GMT</pubDate>
+    <pubDate>Mon, 20 Mar 2017 15:38:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Test Category</title>
-      <link>http://www.bonobono.net/TestCategory/TestCate2/Test-Category/</link>
-      <guid>http://www.bonobono.net/TestCategory/TestCate2/Test-Category/</guid>
-      <pubDate>Thu, 09 Mar 2017 15:56:38 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;Test-Category-page&quot;&gt;&lt;a href=&quot;#Test-Category-page&quot; class=&quot;headerlink&quot; title=&quot;Test Category page&quot;&gt;&lt;/a&gt;Test Category page&lt;/h1&gt;&lt;h2 id=&quot;S
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Test-Category-page"><a href="#Test-Category-page" class="headerlink" title="Test Category page"></a>Test Category page</h1><h2 id="SubCategory"><a href="#SubCategory" class="headerlink" title="SubCategory"></a>SubCategory</h2><p>!<br><img src="test_01.jpg" alt=""></p>
-<p>asset<br><img src="/TestCategory/TestCate2/Test-Category/test_01.jpg" alt="test_01.jpg" title=""></p>
-]]></content:encoded>
-      
-      <comments>http://www.bonobono.net/TestCategory/TestCate2/Test-Category/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Test Asset</title>
-      <link>http://www.bonobono.net/Test-Asset/</link>
-      <guid>http://www.bonobono.net/Test-Asset/</guid>
-      <pubDate>Thu, 09 Mar 2017 04:47:53 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;path : test_01&lt;br&gt;/Test-Asset/test_01.jpg&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;asset_img : test_02&lt;br&gt;&lt;img src=&quot;/Test-Asset/test_02.jpg&quot; alt=&quot;test_02.jpg&quot; t
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p>path : test_01<br>/Test-Asset/test_01.jpg</p>
-<p></p><p><br>asset_img : test_02<br><img src="/Test-Asset/test_02.jpg" alt="test_02.jpg" title=""></p>
-<p></p><p><br>asset_img : /images/test_04<br></p>
-<p></p><p><br>test_03<br>link : test_03<br><a href="/Test-Asset/test_03.jpg" title="test_03.jpg">test_03.jpg</a><br>절대경로 : test_04<br><img src="/images/test_04.jpg" alt=""><br>asset 절대경로 : test_05<br>test_05 -&gt; fail<br><br>fail시 처리 : test_06<br><img src="/images/test_08.jpg" alt="fail image"></p>
-]]></content:encoded>
-      
-      <comments>http://www.bonobono.net/Test-Asset/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Test Private</title>
-      <link>http://www.bonobono.net/Test-Private/</link>
-      <guid>http://www.bonobono.net/Test-Private/</guid>
-      <pubDate>Wed, 08 Mar 2017 08:48:51 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>http://www.bonobono.net/Test-Private/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Test Tag Cloud</title>
-      <link>http://www.bonobono.net/Test-Tag-Cloud/</link>
-      <guid>http://www.bonobono.net/Test-Tag-Cloud/</guid>
-      <pubDate>Wed, 08 Mar 2017 08:47:00 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>http://www.bonobono.net/Test-Tag-Cloud/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Test Gallery</title>
-      <link>http://www.bonobono.net/Test-Gallery/</link>
-      <guid>http://www.bonobono.net/Test-Gallery/</guid>
-      <pubDate>Wed, 08 Mar 2017 08:38:25 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>http://www.bonobono.net/Test-Gallery/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Test Links</title>
-      <link>http://www.bonobono.net/Test-Links/</link>
-      <guid>http://www.bonobono.net/Test-Links/</guid>
-      <pubDate>Wed, 08 Mar 2017 08:35:46 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>http://www.bonobono.net/Test-Links/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>Hello World2</title>
-      <link>http://www.bonobono.net/hello-world/</link>
-      <guid>http://www.bonobono.net/hello-world/</guid>
-      <pubDate>Wed, 08 Mar 2017 08:06:49 GMT</pubDate>
+      <link>http://www.bonobono.net/test/hexo/hello-world/</link>
+      <guid>http://www.bonobono.net/test/hexo/hello-world/</guid>
+      <pubDate>Mon, 20 Mar 2017 15:38:58 GMT</pubDate>
       <description>
       
         &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
@@ -125,13 +38,100 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content:encoded>
       
-      <comments>http://www.bonobono.net/hello-world/#disqus_thread</comments>
+      <comments>http://www.bonobono.net/test/hexo/hello-world/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Test Category</title>
+      <link>http://www.bonobono.net/test/hexo/test-category/</link>
+      <guid>http://www.bonobono.net/test/hexo/test-category/</guid>
+      <pubDate>Thu, 09 Mar 2017 15:56:38 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;Test-Category-page&quot;&gt;&lt;a href=&quot;#Test-Category-page&quot; class=&quot;headerlink&quot; title=&quot;Test Category page&quot;&gt;&lt;/a&gt;Test Category page&lt;/h1&gt;&lt;h2 id=&quot;S
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Test-Category-page"><a href="#Test-Category-page" class="headerlink" title="Test Category page"></a>Test Category page</h1><h2 id="SubCategory"><a href="#SubCategory" class="headerlink" title="SubCategory"></a>SubCategory</h2><p>!<br><img src="test_01.jpg" alt=""></p>
+<p>asset<br><img src="/test/hexo/test-category/test_01.jpg" alt="test_01.jpg" title=""></p>
+]]></content:encoded>
+      
+      <comments>http://www.bonobono.net/test/hexo/test-category/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Test Asset</title>
+      <link>http://www.bonobono.net/test/hexo/test-asset/</link>
+      <guid>http://www.bonobono.net/test/hexo/test-asset/</guid>
+      <pubDate>Thu, 09 Mar 2017 04:47:53 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;path : test_01&lt;br&gt;/test/hexo/test-asset/test_01.jpg&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;asset_img : test_02&lt;br&gt;&lt;img src=&quot;/test/hexo/test-asset/test_02.jpg&quot;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>path : test_01<br>/test/hexo/test-asset/test_01.jpg</p>
+<p></p><p><br>asset_img : test_02<br><img src="/test/hexo/test-asset/test_02.jpg" alt="test_02.jpg" title=""></p>
+<p></p><p><br>asset_img : /images/test_04<br></p>
+<p></p><p><br>test_03<br>link : test_03<br><a href="/test/hexo/test-asset/test_03.jpg" title="test_03.jpg">test_03.jpg</a><br>절대경로 : test_04<br><img src="/images/test_04.jpg" alt=""><br>asset 절대경로 : test_05<br>test_05 -&gt; fail<br><br>fail시 처리 : test_06<br><img src="/images/test_08.jpg" alt="fail image"></p>
+]]></content:encoded>
+      
+      <comments>http://www.bonobono.net/test/hexo/test-asset/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Test Private</title>
+      <link>http://www.bonobono.net/test/hexo/test-private/</link>
+      <guid>http://www.bonobono.net/test/hexo/test-private/</guid>
+      <pubDate>Wed, 08 Mar 2017 08:48:51 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://www.bonobono.net/test/hexo/test-private/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Test Tag Cloud</title>
+      <link>http://www.bonobono.net/test/hexo/test-tag-cloud/</link>
+      <guid>http://www.bonobono.net/test/hexo/test-tag-cloud/</guid>
+      <pubDate>Wed, 08 Mar 2017 08:47:00 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://www.bonobono.net/test/hexo/test-tag-cloud/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Test Gallery</title>
+      <link>http://www.bonobono.net/test/hexo/test-gallery/</link>
+      <guid>http://www.bonobono.net/test/hexo/test-gallery/</guid>
+      <pubDate>Wed, 08 Mar 2017 08:38:25 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://www.bonobono.net/test/hexo/test-gallery/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Test Links</title>
+      <link>http://www.bonobono.net/test/hexo/test-links/</link>
+      <guid>http://www.bonobono.net/test/hexo/test-links/</guid>
+      <pubDate>Wed, 08 Mar 2017 08:35:46 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://www.bonobono.net/test/hexo/test-links/#disqus_thread</comments>
     </item>
     
     <item>
       <title>테스트 포스트</title>
-      <link>http://www.bonobono.net/Test-Post/</link>
-      <guid>http://www.bonobono.net/Test-Post/</guid>
+      <link>http://www.bonobono.net/test/hexo/test-post/</link>
+      <guid>http://www.bonobono.net/test/hexo/test-post/</guid>
       <pubDate>Wed, 08 Mar 2017 06:30:33 GMT</pubDate>
       <description>
       
@@ -210,32 +210,14 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h1 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h1><iframe src="http://www.iniline.co.kr" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
 <h1 id="YouTube"><a href="#YouTube" class="headerlink" title="YouTube"></a>YouTube</h1><div class="video-container"><iframe src="//www.youtube.com/embed/AOMBPyOlFSE" frameborder="0" allowfullscreen></iframe></div>
 <h1 id="vimeo"><a href="#vimeo" class="headerlink" title="vimeo"></a>vimeo</h1><div class="video-container"><iframe src="//player.vimeo.com/video/167976188" frameborder="0" allowfullscreen></iframe></div>
-<h1 id="post-삽입"><a href="#post-삽입" class="headerlink" title="post 삽입"></a>post 삽입</h1><a href="/hello-world/" title="헬로월드">헬로월드</a>
+<h1 id="post-삽입"><a href="#post-삽입" class="headerlink" title="post 삽입"></a>post 삽입</h1>
 <h1 id="raw"><a href="#raw" class="headerlink" title="raw"></a>raw</h1>
 content
 <javascript>alert('!!!');
 
 </javascript>]]></content:encoded>
       
-      <comments>http://www.bonobono.net/Test-Post/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>안녕 Hexo</title>
-      <link>http://www.bonobono.net/%EC%95%88%EB%85%95-Hexo/</link>
-      <guid>http://www.bonobono.net/%EC%95%88%EB%85%95-Hexo/</guid>
-      <pubDate>Wed, 08 Mar 2017 05:27:12 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;안녕하세요~!!&lt;br&gt;테스트 포스팅입니다.&lt;br&gt;근데 한글을 어떻게 써야 할까요… 제길~&lt;/p&gt;
-
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p>안녕하세요~!!<br>테스트 포스팅입니다.<br>근데 한글을 어떻게 써야 할까요… 제길~</p>
-]]></content:encoded>
-      
-      <comments>http://www.bonobono.net/%EC%95%88%EB%85%95-Hexo/#disqus_thread</comments>
+      <comments>http://www.bonobono.net/test/hexo/test-post/#disqus_thread</comments>
     </item>
     
   </channel>

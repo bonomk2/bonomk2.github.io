@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /about/
+Disallow: /guestbook/
+Disallow: /test/
+Disallow: /sample/
+Disallow: /images/
+Disallow: /*.gif$
+Disallow: /*.jpg$
+Disallow: /*.png$

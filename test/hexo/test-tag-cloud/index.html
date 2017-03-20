@@ -10,7 +10,7 @@
     
     <title>
         
-            Test Links | 
+            Test Tag Cloud | 
         
         Bonobono&#39;s Blog
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="bonobono">
     <meta name="description" content="description">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,test,hexo">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.bonobono.net">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Test Links | Bonobono&#39;s Blog">
+    <meta property="og:title" content="Test Tag Cloud | Bonobono&#39;s Blog">
     <meta property="og:description" content="description">
-    
+    <meta property="og:article:tag" content="test"> <meta property="og:article:tag" content="hexo"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -261,124 +261,51 @@
 
 <!-- Layouts -->
 
-    <!-- Single Links Page -->
+    <!-- Tags Cloud -->
     <style>
-    .md-links {
-        min-height: calc(100% - 120px - 5pc - 6em);
-        text-align: center;
-        overflow: auto;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 320px;
-    }
-
-    @media screen and (min-width: 640px) {
-        .md-links {
-            max-width: 640px;
-        }
-    }
-
-    @media screen and (min-width: 960px) {
-        .md-links {
-            max-width: 960px;
-        }
-    }
-
-    @media screen and (min-width: 1280px) {
-        .md-links {
-            max-width: 1280px;
-        }
-    }
-
-    @media screen and (min-width: 1600px) {
-        .md-links {
-            max-width: 1600px;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .md-links {
-            min-height: calc(100% - 200px - 5pc - 6em);
-            margin-top: 6em;
-        }
-    }
-
-    .md-links-item {
-        background: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-        height: 72px;
-        line-height: 15px;
-        margin: 20px 10px;
-        padding: 0px 0px;
-        transition: box-shadow 0.25s;
-    }
-
-    .md-links a {
-        color: #333;
-        text-decoration: none;
-    }
-
-    .md-links li {
-        width: 300px;
-        float: left;
-        list-style: none;
-    }
-
-    .md-links-item img {
-        float: left;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 11px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    }
-
-    .md-links-item:hover {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .md-links-item a:hover{
-        cursor: pointer;
-    }
-
-    .md-links-title {
-        font-size: 20px;
-        line-height: 50px;
-    }
-
-    #scheme-Paradox .mdl-mini-footer{
-        clear: left;
-    }
     #bottom{
         position: relative;
     }
+
+    @media screen and (max-width: 480px) {
+        .material-tagscloud{
+            margin: 6em 2em 0;
+        }
+    }
+
+    .material-tagscloud a{
+        text-decoration:none;
+        padding: 1px 9px;
+        margin: 9px 1px;
+        line-height: 40px;
+        white-space: nowrap;
+        transition: .6s;
+        opacity: .85;
+    }
+
+    .material-tagscloud a:hover{
+        transition: .6s;
+        opacity: 1;
+        background: #FAFAFA;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
 </style>
 
-<ul class="md-links">
-    
-        
-            <li class="md-links-item">
-                <a href="http://blog.bonobono.net" title="Past Blog" target="_blank">
-                    <img src="null" alt="Past Blog" width="72px"/>
-                    <span class="md-links-title">Past Blog</span><br />
-                    <span>bonobono past naver blog</span>
-                </a>
-            </li>
-        
-            <li class="md-links-item">
-                <a href="http://www.iniline.co.kr" title="iniLINE" target="_blank">
-                    <img src="null" alt="iniLINE" width="72px"/>
-                    <span class="md-links-title">iniLINE</span><br />
-                    <span>iniLINE Homepage</span>
-                </a>
-            </li>
-        
-    
-</ul>
+<div class=" material-tagscloud">
+    <div class="material-post mdl-grid">
+        <a href="/tags/hexo/" style="font-size: 16px; color: #757575">hexo</a> <a href="/tags/test/" style="font-size: 16px; color: #757575">test</a>
+    </div>
+</div>
+
 
 <script>
     var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
+        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
             var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
             $('#bottom').css('bottom', '-' + footerBottom + 'px');
         }
     };
+
     $(document).ready(function() {
         adjustFooter();
     });
@@ -489,7 +416,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/TestCategory/">TestCategory<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/TestCategory/TestCate2/">TestCate2<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/test/">test<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/test/hexo/">hexo<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/test/">test<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/test/hexo/">hexo<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -509,7 +436,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">9</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
