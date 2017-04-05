@@ -25,9 +25,11 @@
 .is-post{
 	padding-top:0px;
 }
+/**
 .MD-burger-icon{
 	height:0px;
 }
+**/
 #scheme-Paradox .material-layout .mdl-card {
     min-height: 0px;
 }
