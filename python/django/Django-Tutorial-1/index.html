@@ -10,7 +10,7 @@
     
     <title>
         
-            Test Links | 
+            Django Tutorial 1 | 
         
         Bonobono&#39;s Blog
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="bonobono">
     <meta name="description" content="description">
-    <meta name="keywords" content="null,test,hexo">
+    <meta name="keywords" content="null,python,django">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.bonobono.net">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Test Links | Bonobono&#39;s Blog">
+    <meta property="og:title" content="Django Tutorial 1 | Bonobono&#39;s Blog">
     <meta property="og:description" content="description">
-    <meta property="og:article:tag" content="test"> <meta property="og:article:tag" content="hexo"> 
+    <meta property="og:article:tag" content="python"> <meta property="og:article:tag" content="django"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -247,7 +247,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Python-설치"><span class="post-toc-number">1.</span> <span class="post-toc-text">Python 설치</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Django-설치"><span class="post-toc-number">2.</span> <span class="post-toc-text">Django 설치</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#가상환경-설정"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">가상환경 설정</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#장고-설치"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">장고 설치</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#프로젝트-생성"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">프로젝트 생성</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#프로젝트-설정-변경"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">프로젝트 설정 변경</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -261,130 +261,241 @@
 
 <!-- Layouts -->
 
-    <!-- Single Links Page -->
-    <style>
-    .md-links {
-        min-height: calc(100% - 120px - 5pc - 6em);
-        text-align: center;
-        overflow: auto;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 320px;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (min-width: 640px) {
-        .md-links {
-            max-width: 640px;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    @media screen and (min-width: 960px) {
-        .md-links {
-            max-width: 960px;
-        }
-    }
-
-    @media screen and (min-width: 1280px) {
-        .md-links {
-            max-width: 1280px;
-        }
-    }
-
-    @media screen and (min-width: 1600px) {
-        .md-links {
-            max-width: 1600px;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .md-links {
-            min-height: calc(100% - 200px - 5pc - 6em);
-            margin-top: 6em;
-        }
-    }
-
-    .md-links-item {
-        background: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-        height: 72px;
-        line-height: 15px;
-        margin: 20px 10px;
-        padding: 0px 0px;
-        transition: box-shadow 0.25s;
-    }
-
-    .md-links a {
-        color: #333;
-        text-decoration: none;
-    }
-
-    .md-links li {
-        width: 300px;
-        float: left;
-        list-style: none;
-    }
-
-    .md-links-item img {
-        float: left;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 11px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    }
-
-    .md-links-item:hover {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .md-links-item a:hover{
-        cursor: pointer;
-    }
-
-    .md-links-title {
-        font-size: 20px;
-        line-height: 50px;
-    }
-
-    #scheme-Paradox .mdl-mini-footer{
-        clear: left;
-    }
-    #bottom{
-        position: relative;
-    }
-</style>
-
-<ul class="md-links">
+				
+				
+					<!-- Post Header(Thumbnail & Title) -->
+					
+    <!-- Paradox Post Header -->
     
         
-            <li class="md-links-item">
-                <a href="http://blog.bonobono.net" title="Past Blog" target="_blank">
-                    <img src="null" alt="Past Blog" width="72px"/>
-                    <span class="md-links-title">Past Blog</span><br />
-                    <span>bonobono past naver blog</span>
-                </a>
-            </li>
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
+</script>
+
         
-            <li class="md-links-item">
-                <a href="http://www.iniline.co.kr" title="iniLINE" target="_blank">
-                    <img src="null" alt="iniLINE" width="72px"/>
-                    <span class="md-links-title">iniLINE</span><br />
-                    <span>iniLINE Homepage</span>
-                </a>
+    
+            <p class="article-headline-p">
+                Django Tutorial 1
+            </p>
+        </div>
+
+
+
+
+
+					
+						<!-- Paradox Post Info -->
+						<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/profile.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>bonobono</strong>
+        <span>2017-04-05</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/django/">django</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/python/">python</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Django Tutorial 1&url=http://www.bonobono.net//python/django/Django-Tutorial-1/index.html&via=bonobono" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
             </li>
-        
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.bonobono.net//python/django/Django-Tutorial-1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.bonobono.net//python/django/Django-Tutorial-1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
     
 </ul>
 
+</div>
+
+					
+
+					<!-- Post Content -->
+					<div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>홈페이지를 몇개 만들일이 있어서 요즘 이것저것 찾아보고 있다..<br>서버쪽은 Spring4, nodejs+express 를 봤는데… 아직까지 뭔가 맘에 안들어 python도 좀 봐야 할듯..<br>회사에서도 조만간 쓸일이 있을듯하니 겸사겸사 한번 짚고 넘어가는것이 좋을것 같다.</p>
+<p>python은 hudson 돌리면서 텍스트 변경하고 하는것들이 해본것의 전부라서<br>제대로 익히려면 시간이 좀 걸릴거 같다… ES6도 아직 제대로 안 익힌 마당에 다 까먹겠… -_-;;</p>
+<p>기본적인 튜토리얼은 장고걸스(<a href="https://tutorial.djangogirls.org/ko/)를" target="_blank" rel="external">https://tutorial.djangogirls.org/ko/)를</a> 기초로 작성하였고,<br>서버에 대한 내용만 쭉 작성할 예정이다.. 화면은 별도 포스팅으로…</p>
+<h1 id="Python-설치"><a href="#Python-설치" class="headerlink" title="Python 설치"></a>Python 설치</h1><p>설치는 그냥 설치하자…. 회사에서 작업하다보니 나중에 우분투로 옮길것도 감안해야하는데..<br>우선은 기능 테스트만 몇가지 정도 해보면 되니까… 자세한 내용은 패스~!!</p>
+<h1 id="Django-설치"><a href="#Django-설치" class="headerlink" title="Django 설치"></a>Django 설치</h1><h2 id="가상환경-설정"><a href="#가상환경-설정" class="headerlink" title="가상환경 설정"></a>가상환경 설정</h2><p>가상환경(virtualenv)을 왜 만들고 어디다 써먹는지는 나중에 자세히 알아보련다..<br>우선은 튜토리얼에 있는대로 진행….</p>
+<ul>
+<li>가상환경을 생성</li>
+</ul>
+<pre><code>~&#x2F;workspace&#x2F;django$ python -m venv myvenv</code></pre>
+<p>실행하면 django 폴더내에 myvenv 라는 폴더가 생성되고 거기에 기본 정보들이 셋팅된다..</p>
+<ul>
+<li>가상환경 실행</li>
+</ul>
+<pre><code>~&#x2F;workspace&#x2F;django$ myvenv&#x2F;Scripts&#x2F;activate
+(myenv)~&#x2F;workspace&#x2F;django$</code></pre>
+<p>생성한 가상환경을 activate 시키는것 같은데… 여튼 실행하면 앞에 생성한 가상환경 명이 붙는다.</p>
+<h2 id="장고-설치"><a href="#장고-설치" class="headerlink" title="장고 설치"></a>장고 설치</h2><p>pip를 이용해서 장고를 설치..</p>
+<pre><code>(myenv)~&#x2F;workspace&#x2F;django$ pip install django
+...
+(myenv)~&#x2F;workspace&#x2F;django$</code></pre>
+<h2 id="프로젝트-생성"><a href="#프로젝트-생성" class="headerlink" title="프로젝트 생성"></a>프로젝트 생성</h2><p>django-admin을 사용하여 mysite라는 프로젝트를 생성한다. </p>
+<pre><code>(myenv)~&#x2F;workspace&#x2F;django$ django-admin startproject mysite .</code></pre>
+<p>동작후에는 mysite라는 폴더가 생성되고 거기에 설정들이 들어가 있음..</p>
+<h2 id="프로젝트-설정-변경"><a href="#프로젝트-설정-변경" class="headerlink" title="프로젝트 설정 변경"></a>프로젝트 설정 변경</h2><p>mysite/setting.py 파일을 수정하여 TIME_ZONE을 수정하고, Static 경로를 최하단에 추가로 설정한다.<br>데이터베이스는 기본으로 sqlite3가 설정되어 있다는 DATABASES 값을 참고..</p>
+<pre><code>TIME_ZONE = &#39;Asia&#x2F;Seoul&#39;
+...
+STATIC_ROOT = os.path.join(BASE_DIR, &#39;static&#39;)</code></pre>
+<p>이후에 변경된 설정을 migrate 시킴</p>
+<pre><code>(myenv)~&#x2F;workspace&#x2F;django$ python manage.py migrate</code></pre>
+<p>이제는 서버를 실행</p>
+<pre><code>(myenv)~&#x2F;workspace&#x2F;django$ python manage.py runserver
+System check identified no issues (0 silenced).
+April 05, 2017 - 21:14:31
+Django version 1.11, using settings &#39;mysite.settings&#39;
+Starting development server at http:&#x2F;&#x2F;127.0.0.1:8000&#x2F;
+Quit the server with CTRL-BREAK.</code></pre>
+<p>실행후 브라우저 확인<br><img src="/python/django/Django-Tutorial-1/01_run.png" alt="01_run.png" title=""></p>
+<p>첫 포스팅이니까.. 오늘은 여기까지… 잇힝~!!</p>
+
+    
+
+    
+</div>
+
+
+					
+				
+				
+                <!-- Post Comments -->
+                
+                    
+
+
+    <div id="disqus-comment">
+        <div id="disqus_thread"></div>
 <script>
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
-    $(document).ready(function() {
-        adjustFooter();
-    });
+    queue.offer(function() {
+            var disqus_config = function () {
+                this.page.url = 'http://www.bonobono.net/python/django/Django-Tutorial-1/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//bonobono-net.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
 </script>
 
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
 
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/test/hexo/hello-world/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
