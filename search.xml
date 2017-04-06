@@ -4,6 +4,163 @@
   
     
     <entry>
+      <title><![CDATA[Django Tutorial 3]]></title>
+      <url>http://www.bonobono.net/python/django/Django-Tutorial-3/</url>
+      <content type="html"><![CDATA[<p>이때 갑자기 나오는 배포… ㄷㄷㄷㄷㄷㄷㄷㄷ</p>
+<p>장고걸스 튜터리얼이 적응이 잘 안되네…<br>장고 사이트에 있는 튜토리얼상으로는 뷰가 먼저인듯한데…<br>뭐 여튼 </p>
+<h1 id="배포"><a href="#배포" class="headerlink" title="배포"></a>배포</h1><p>여튼 해당 내용은 패스…<br>다만 static 파일을 별도로 꺼내오는 부분이 있어 이 부분만 잠깐 언급하자면..</p>
+<h2 id="정적파일-모으기"><a href="#정적파일-모으기" class="headerlink" title="정적파일 모으기"></a>정적파일 모으기</h2><p>정적인 파일을 별도의 static 폴더로 뺄 수 있는 기능인듯하다..</p>
+<p>python manage.py collectstatic 으로 동작</p>
+<pre>
+(myenv)~/workspace/django$ python manage.py collectstatic
+</pre>
+
+<p>실행하면 정적 파일들을 static 폴더에 쭉 뽑아낸다..<br>웹서버로 보내기 위한 용도인거 같은데 자세한건 나중에 보면 알겠지..</p>
+<p>================================================<br>이후 마저 작성예정…</p>
+<h1 id="urls"><a href="#urls" class="headerlink" title="urls"></a>urls</h1><h1 id="View"><a href="#View" class="headerlink" title="View"></a>View</h1>]]></content>
+      
+        <categories>
+            
+            <category> python </category>
+            
+            <category> django </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> django </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Django Tutorial 2]]></title>
+      <url>http://www.bonobono.net/python/django/Django-Tutorial-2/</url>
+      <content type="html"><![CDATA[<p>이전 내용에 이어서 쭉~~~</p>
+<h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>데이터베이스의 스키마를 정의하고 테이블을 생성한 후, 외부에서 정의한 인터페이스로 데이터를<br>주고 받도록 하는 역할로 추측됨..<br>추후 동작에 대한 머릿속 정리가 되면 내용을 수정할 예정.. 내가 써놓고도 이해가 안감..</p>
+<h2 id="어플리케이션-생성"><a href="#어플리케이션-생성" class="headerlink" title="어플리케이션 생성"></a>어플리케이션 생성</h2><p>python manage.py startapp [AppName] 의 형태로 어플리케이션을 생성한다.</p>
+<pre>
+(myenv)~/workspace/django$ python manage.py startapp blog
+</pre>
+
+<p>mysite/setting.py를 열어 INSTALLED_APPS 항목에 blog를 추가하여 APP을 알려준다.</p>
+<pre class=" language-python"><code class="language-python">
+INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.staticfiles'</span><span class="token punctuation">,</span>
+    <span class="token string">'blog'</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+
+<h2 id="모델-정의"><a href="#모델-정의" class="headerlink" title="모델 정의"></a>모델 정의</h2><p>blog/models.py 파일을 아래와 같이 작성한다.</p>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>utils <span class="token keyword">import</span> timezone
+
+<span class="token keyword">class</span> <span class="token class-name">Post</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    author <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span><span class="token string">'auth.User'</span><span class="token punctuation">)</span>
+    title <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span>
+    text <span class="token operator">=</span> models<span class="token punctuation">.</span>TextField<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    create_date <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>default<span class="token operator">=</span>timezone<span class="token punctuation">.</span>now<span class="token punctuation">)</span>
+    publish_date <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">publish</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>published_date <span class="token operator">=</span> timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>title
+</code></pre>
+
+<p>유의할점은 Post는 첫글자를 대문자로..<br>models.Model 값은 장고 모델임을 의미한단다..<br>자세한 내용은 Document ( <a href="https://docs.djangoproject.com/en/1.11/ref/models/" target="_blank" rel="external">https://docs.djangoproject.com/en/1.11/ref/models/</a> )를 참고</p>
+<h2 id="테이블-만들기"><a href="#테이블-만들기" class="headerlink" title="테이블 만들기"></a>테이블 만들기</h2><p>python manage.py makemigrations [AppName] 를 사용하여 정의한 모델을 생성</p>
+<pre>
+(myenv)~/workspace/django$ python manage.py makemigrations blog
+Migrations for 'blog':
+  blog\migrations\0001_initial.py
+    - Create model Post
+</pre>
+
+<p>python manage.py migrate [AppName] 을 사용하여 마이그레이션..</p>
+<pre>
+(myenv)~/workspace/django$ python manage.py migrate blog
+Operations to perform:
+  Apply all migrations: blog
+Running migrations:
+  Applying blog.0001_initial... OK
+</pre>
+
+<p>실행하면 디비테이블이 생성된다고 한다..<br>눈에 보이는게 없으니….. 답답하구나…..</p>
+<h1 id="Admin"><a href="#Admin" class="headerlink" title="Admin"></a>Admin</h1><h2 id="관리자-구동"><a href="#관리자-구동" class="headerlink" title="관리자 구동"></a>관리자 구동</h2><p>앞서 생성한 모델(?)을 admin에 등록해야 하는듯…<br>blog/admin.py 파일에 아래와 같이 작성한다.</p>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Post
+
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Post<span class="token punctuation">)</span>
+</code></pre>
+
+<p>파일 작성후 서버를 구동하고 브라우저로 접속</p>
+<pre>
+(myenv)~/workspace/django$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 06, 2017 - 16:53:09
+Django version 1.11, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+</pre>
+
+<p><a href="http://127.0.0.1:8000/admin" target="_blank" rel="external">http://127.0.0.1:8000/admin</a> 으로 접속</p>
+<img src="/python/django/Django-Tutorial-2/01_run.png" alt="01_run.png" title="">
+<p>근데 계정을 모른다… 슈퍼유저를 새로 생성한다..<br>작업 순서가 오째 나와는 좀 안맞…. -_-;;</p>
+<pre>
+(myenv)~/workspace/django$ python manage.py createsuperuser
+Username (leave blank to use 'bonobono'): bonobono
+Email address: me@bonobono.net
+Password:
+Password (again):
+Superuser created successfully.
+</pre>
+
+<p>다시 접속하여 ID/PASS 를 입력하면 로그인이 된다.</p>
+<img src="/python/django/Django-Tutorial-2/02_admin.png" alt="02_admin.png" title="">
+<p>오… 신기신기..</p>
+<p>관리자에 생성된 Posts를 클릭하여 글을 작성하고 수정해본다..</p>
+<img src="/python/django/Django-Tutorial-2/03_posting.png" alt="03_posting.png" title="">
+<p>admin과 관련한 내용은 <a href="https://docs.djangoproject.com/en/1.11/ref/contrib/admin/" target="_blank" rel="external">https://docs.djangoproject.com/en/1.11/ref/contrib/admin/</a> 를 참고</p>
+<p>지금까지 한 내용을 쭉 따라 왔다면 지금 내가 느끼는 감정과 동일할거라 생각한다..<br>Admin은 뭐하는 놈이고.. 그래서 어떻게 개발해서 동작하는건데.. 라는..<br>강좌를 더 보다보면 답이 나오겠지… -_-;;;;</p>
+]]></content>
+      
+        <categories>
+            
+            <category> python </category>
+            
+            <category> django </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> django </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Django Tutorial 1]]></title>
       <url>http://www.bonobono.net/python/django/Django-Tutorial-1/</url>
       <content type="html"><![CDATA[<p>홈페이지를 몇개 만들일이 있어서 요즘 이것저것 찾아보고 있다..<br>서버쪽은 Spring4, nodejs+express 를 봤는데… 아직까지 뭔가 맘에 안들어 python도 좀 봐야 할듯..<br>회사에서도 조만간 쓸일이 있을듯하니 겸사겸사 한번 짚고 넘어가는것이 좋을것 같다.</p>
