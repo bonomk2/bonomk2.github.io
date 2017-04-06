@@ -8,11 +8,11 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>description</description>
-    <pubDate>Thu, 06 Apr 2017 09:06:43 GMT</pubDate>
+    <pubDate>Thu, 06 Apr 2017 09:08:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Django Tutorial 3</title>
+      <title>Django Tutorial 3 (작성중)</title>
       <link>http://www.bonobono.net/python/django/Django-Tutorial-3/</link>
       <guid>http://www.bonobono.net/python/django/Django-Tutorial-3/</guid>
       <pubDate>Thu, 06 Apr 2017 08:50:00 GMT</pubDate>
