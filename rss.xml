@@ -8,25 +8,124 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>description</description>
-    <pubDate>Thu, 06 Apr 2017 09:08:44 GMT</pubDate>
+    <pubDate>Fri, 07 Apr 2017 08:31:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Django Tutorial 3 (작성중)</title>
+      <title>Django Tutorial 4</title>
+      <link>http://www.bonobono.net/python/django/Django-Tutorial-4/</link>
+      <guid>http://www.bonobono.net/python/django/Django-Tutorial-4/</guid>
+      <pubDate>Fri, 07 Apr 2017 07:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;view에 사용되는 템플릿에 대하여 자세히 보자.&lt;/p&gt;
+&lt;h1 id=&quot;정적파일-처리&quot;&gt;&lt;a href=&quot;#정적파일-처리&quot; class=&quot;headerlink&quot; title=&quot;정적파일 처리&quot;&gt;&lt;/a&gt;정적파일 처리&lt;/h1&gt;&lt;p&gt;css, js 등의 정적파일
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>view에 사용되는 템플릿에 대하여 자세히 보자.</p>
+<h1 id="정적파일-처리"><a href="#정적파일-처리" class="headerlink" title="정적파일 처리"></a>정적파일 처리</h1><p>css, js 등의 정적파일을 처리하는 부분이다..<br>그냥 인클루드하면 되는게 아니었…</p>
+<p>static 파일들은 blog 폴더 아래 static 폴더를 생성하고 그 안에 넣는다.<br>css/blog.css 라는 파일을 생성하고자 한다면 blog/static/css/blog.css 를 생성<br>시험을 위해 임의로 한개만 작성해본다.</p>
+<ul>
+<li>blog/static/css/blog.css</li>
+</ul>
+<pre class=" language-css"><code class="language-css">
+<span class="token selector">h1 a </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#FCA205</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>앞서 만든 템플릿파일에 적용하기 위해서 post_list.html 파일 상단에 다음과 같이 추가하고 css 파일을 추가</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+{% load staticfiles %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% static <span class="token punctuation">'</span>css/blog.css<span class="token punctuation">'</span> %}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/css/prism.css<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Django Girls Blog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+    {% for post in posts %}
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>published: {{ post.published_date }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{ post.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>{{ post.text|linebreaksbr }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+	{% endfor %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+
+
+<p>페이지를 확인해보면 아래와 같이 CSS가 적용되어 보이게 된다.</p>
+<img src="/python/django/Django-Tutorial-4/01_static.png" alt="01_static.png" title="">
+<p>페이지 소스보기를 해 보면 /static/css/blog.css가 인클루드 되어 있다는…<br>blog 자체가 루트부터 먹어 들어가니 이렇게 되어 있는거 같긴 한데..<br>다른 App을 만들어보지 않았으니 확실히는 모르겠다.. 그냥 코딩해도 될거 같긴 한데 말이지..</p>
+<img src="/python/django/Django-Tutorial-4/02_source.png" alt="02_source.png" title="">
+<h1 id="템플릿-확장"><a href="#템플릿-확장" class="headerlink" title="템플릿 확장"></a>템플릿 확장</h1><p>JSP에서 인클루드 하듯이 여기도 템플릿을 통해서 구성이 가능한거 같다..<br>근데 구조는 반대라는..</p>
+<p>방금 만든 post_list.html 의 알맹이부분을 남기고 남은 부분을 확장하여 사용 가능하다.<br>예를 들면..</p>
+<p>껍데기 파일을 새로 base.html 이라는 녀석을 만들고 아래와 같이 작성한다.</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+{% load staticfiles %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% static <span class="token punctuation">'</span>css/blog.css<span class="token punctuation">'</span> %}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Django Girls Blog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    {% block content %}
+	{% endblock %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+
+<p>기존 post_list.html 파일은 아래와 같이 작성</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	{% for post in posts %}
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>published: {{ post.published_date }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{ post.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>{{ post.text|linebreaksbr }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+	{% endfor %}
+{% endblock %}
+</code></pre>
+
+<p>앞서 만들었던 페이지와 동일한 결과가 보이게 된다.</p>
+<img src="/python/django/Django-Tutorial-4/01_static.png" alt="01_static.png" title="">
+<p>여기에 남은 내용들 다 때려 넣으려 했는데.. 다음으로 넘겨야겠네..<br>문서를 볼수록 음… 뭔가 계속 어색하다…..;;;;;</p>
+]]></content:encoded>
+      
+      <comments>http://www.bonobono.net/python/django/Django-Tutorial-4/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Django Tutorial 3</title>
       <link>http://www.bonobono.net/python/django/Django-Tutorial-3/</link>
       <guid>http://www.bonobono.net/python/django/Django-Tutorial-3/</guid>
       <pubDate>Thu, 06 Apr 2017 08:50:00 GMT</pubDate>
       <description>
       
-        &lt;p&gt;이때 갑자기 나오는 배포… ㄷㄷㄷㄷㄷㄷㄷㄷ&lt;/p&gt;
-&lt;p&gt;장고걸스 튜터리얼이 적응이 잘 안되네…&lt;br&gt;장고 사이트에 있는 튜토리얼상으로는 뷰가 먼저인듯한데…&lt;br&gt;뭐 여튼 &lt;/p&gt;
-&lt;h1 id=&quot;배포&quot;&gt;&lt;a href=&quot;#배포&quot; class=&quot;head
+        &lt;p&gt;이번편은 배포와 View 생성에 대해서 정리한다.&lt;br&gt;배포는 뜬금포로 나오는데 자세한건 생략하고 앞에서 모델을 구성하였으니 urls, View를 설정한다.&lt;/p&gt;
+&lt;h1 id=&quot;배포&quot;&gt;&lt;a href=&quot;#배포&quot; class=&quot;headerlink&quot; 
       
       </description>
       
-      <content:encoded><![CDATA[<p>이때 갑자기 나오는 배포… ㄷㄷㄷㄷㄷㄷㄷㄷ</p>
-<p>장고걸스 튜터리얼이 적응이 잘 안되네…<br>장고 사이트에 있는 튜토리얼상으로는 뷰가 먼저인듯한데…<br>뭐 여튼 </p>
-<h1 id="배포"><a href="#배포" class="headerlink" title="배포"></a>배포</h1><p>여튼 해당 내용은 패스…<br>다만 static 파일을 별도로 꺼내오는 부분이 있어 이 부분만 잠깐 언급하자면..</p>
+      <content:encoded><![CDATA[<p>이번편은 배포와 View 생성에 대해서 정리한다.<br>배포는 뜬금포로 나오는데 자세한건 생략하고 앞에서 모델을 구성하였으니 urls, View를 설정한다.</p>
+<h1 id="배포"><a href="#배포" class="headerlink" title="배포"></a>배포</h1><p>자세한 내용은 생략한다.<br>생략하는 이유는 로컬의 소스를 git으로 올리고.. 이것을 다시 외부서버에 올려서 그것을 오픈하는 내용인데<br>나와는 상관 없는것도 있고.. 일반적이지는 않은거 같다…</p>
+<p>여튼 해당 내용은 패스…<br>다만 static 파일을 별도로 꺼내오는 부분이 있어 이 부분만 잠깐 언급하자면..</p>
 <h2 id="정적파일-모으기"><a href="#정적파일-모으기" class="headerlink" title="정적파일 모으기"></a>정적파일 모으기</h2><p>정적인 파일을 별도의 static 폴더로 뺄 수 있는 기능인듯하다..</p>
 <p>python manage.py collectstatic 으로 동작</p>
 <pre>
@@ -34,8 +133,91 @@
 </pre>
 
 <p>실행하면 정적 파일들을 static 폴더에 쭉 뽑아낸다..<br>웹서버로 보내기 위한 용도인거 같은데 자세한건 나중에 보면 알겠지..</p>
-<p>================================================<br>이후 마저 작성예정…</p>
-<h1 id="urls"><a href="#urls" class="headerlink" title="urls"></a>urls</h1><h1 id="View"><a href="#View" class="headerlink" title="View"></a>View</h1>]]></content:encoded>
+<h1 id="urls"><a href="#urls" class="headerlink" title="urls"></a>urls</h1><p>mysite/urls.py를 열어서 원하는 경로를 추가한다.<br>mysite가 가장 기본이되는 곳이므로 이곳으로부터 출발하게 되는것 같다.</p>
+<p>url은 regex를 사용하여도 되는데 유의할점은 regex 앞에 r을 추가해줘야 한다는거..<br>문자열 안에 특수문자가 있다는걸 알려주는 용도이다.</p>
+<ul>
+<li>mysite/urls.py</li>
+</ul>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> include<span class="token punctuation">,</span> url
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    url<span class="token punctuation">(</span>r<span class="token string">'^admin/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span>admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    url<span class="token punctuation">(</span>r<span class="token string">''</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'blog.urls'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+
+<p>모든거에 대해서 blog 밑에 있는 urls를 담겠다는 뜻인듯하고..<br>이후에 blog 폴더밑에 urls.py를 생성하여 아래와 같이 추가</p>
+<ul>
+<li>blog/urls.py</li>
+</ul>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    url<span class="token punctuation">(</span>r<span class="token string">'^$'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>post_list<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'post_list'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+
+<p>^$ 라고 정의하면 아무것도 매칭되지 않는다는 뜻이니 루트로 접속한 경우에 post_list 라는 녀석을 보여라라는 뜻이된다.</p>
+<h2 id="View"><a href="#View" class="headerlink" title="View"></a>View</h2><p>경로를 정의했으면 이에 매핑되는 뷰를 생성한다.<br>모델에서 정보를 받아와서 결과를 템플릿에 전달하는 역할을 하게 되는데 blog/views.py에서 정의 해준다.</p>
+<ul>
+<li>blog/views.py</li>
+</ul>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+
+<span class="token keyword">def</span> <span class="token function">post_list</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'blog/post_list.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+
+<p>blog/post_list.html 이라는 녀석이 있어야 하는데 이 파일은 blog/templates/blog 폴더를 생성하고 post_list.html을 작성하도록 한다.</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+Hello post_list.html
+</code></pre>
+
+<img src="/python/django/Django-Tutorial-3/01_views.png" alt="01_views.png" title="">
+<p>Post에 있는 데이터를 가져오는 쿼리셋을 추가<br>쿼리셋은 별도로 뒤에 다룰거다.. 지금은 동작 맛보기이므로 패스~~</p>
+<ul>
+<li>blog/views.py</li>
+</ul>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>utils <span class="token keyword">import</span> timezone
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Post
+
+
+<span class="token keyword">def</span> <span class="token function">post_list</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    posts <span class="token operator">=</span> Post<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>create_date__lte<span class="token operator">=</span>timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">'-create_date'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'blog/post_list.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'posts'</span><span class="token punctuation">:</span> posts<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+
+<p>디비에서 posts라는 딕셔너리로 값을 담아서 html에 전달하면 html에서는 해당 값을 꺼내 쓴다.</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Django Girls Blog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+{% for post in posts %}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>published: {{ post.published_date }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{ post.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>{{ post.text|linebreaksbr }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+{% endfor %}
+</code></pre>
+
+<p>다시 페이지 접속하면 목록이 create_date 역순으로 출력되었다.</p>
+<img src="/python/django/Django-Tutorial-3/02_list.png" alt="02_list.png" title="">
+]]></content:encoded>
       
       <comments>http://www.bonobono.net/python/django/Django-Tutorial-3/#disqus_thread</comments>
     </item>
@@ -47,12 +229,12 @@
       <pubDate>Thu, 06 Apr 2017 07:00:00 GMT</pubDate>
       <description>
       
-        &lt;p&gt;이전 내용에 이어서 쭉~~~&lt;/p&gt;
-&lt;h1 id=&quot;Model&quot;&gt;&lt;a href=&quot;#Model&quot; class=&quot;headerlink&quot; title=&quot;Model&quot;&gt;&lt;/a&gt;Model&lt;/h1&gt;&lt;p&gt;데이터베이스의 스키마를 정의하고 테이블을 생성한 후, 외부에서 
+        &lt;p&gt;Model 을 구성하고 실행하여 Database에 테이블을 생성하고 Admin 페이지에서 생성된것을 확인 해 본다.&lt;/p&gt;
+&lt;h1 id=&quot;Model&quot;&gt;&lt;a href=&quot;#Model&quot; class=&quot;headerlink&quot; title=&quot;Model&quot;&gt;&lt;/a
       
       </description>
       
-      <content:encoded><![CDATA[<p>이전 내용에 이어서 쭉~~~</p>
+      <content:encoded><![CDATA[<p>Model 을 구성하고 실행하여 Database에 테이블을 생성하고 Admin 페이지에서 생성된것을 확인 해 본다.</p>
 <h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>데이터베이스의 스키마를 정의하고 테이블을 생성한 후, 외부에서 정의한 인터페이스로 데이터를<br>주고 받도록 하는 역할로 추측됨..<br>추후 동작에 대한 머릿속 정리가 되면 내용을 수정할 예정.. 내가 써놓고도 이해가 안감..</p>
 <h2 id="어플리케이션-생성"><a href="#어플리케이션-생성" class="headerlink" title="어플리케이션 생성"></a>어플리케이션 생성</h2><p>python manage.py startapp [AppName] 의 형태로 어플리케이션을 생성한다.</p>
 <pre>
@@ -169,6 +351,7 @@ Superuser created successfully.
       <content:encoded><![CDATA[<p>홈페이지를 몇개 만들일이 있어서 요즘 이것저것 찾아보고 있다..<br>서버쪽은 Spring4, nodejs+express 를 봤는데… 아직까지 뭔가 맘에 안들어 python도 좀 봐야 할듯..<br>회사에서도 조만간 쓸일이 있을듯하니 겸사겸사 한번 짚고 넘어가는것이 좋을것 같다.</p>
 <p>python은 hudson 돌리면서 텍스트 변경하고 하는것들이 해본것의 전부라서<br>제대로 익히려면 시간이 좀 걸릴거 같다… ES6도 아직 제대로 안 익힌 마당에 다 까먹겠… -_-;;</p>
 <p>기본적인 튜토리얼은 장고걸스( <a href="https://tutorial.djangogirls.org/ko" target="_blank" rel="external">https://tutorial.djangogirls.org/ko</a> )를 기초로 작성하였고,<br>서버에 대한 내용만 쭉 작성할 예정이다.. 화면은 별도 포스팅으로…</p>
+<p>이번 포스팅은 파이썬 설치, 장고 설치, 프로젝트 생성해서 서버기동까지..</p>
 <h1 id="Python-설치"><a href="#Python-설치" class="headerlink" title="Python 설치"></a>Python 설치</h1><p>설치는 그냥 설치하자…. 회사에서 작업하다보니 나중에 우분투로 옮길것도 감안해야하는데..<br>우선은 기능 테스트만 몇가지 정도 해보면 되니까… 자세한 내용은 패스~!!</p>
 <h1 id="Django-설치"><a href="#Django-설치" class="headerlink" title="Django 설치"></a>Django 설치</h1><h2 id="가상환경-설정"><a href="#가상환경-설정" class="headerlink" title="가상환경 설정"></a>가상환경 설정</h2><p>가상환경(virtualenv)을 왜 만들고 어디다 써먹는지는 나중에 자세히 알아보련다..<br>우선은 튜토리얼에 있는대로 진행….</p>
 <ul>

@@ -10,7 +10,7 @@
     
     <title>
         
-            Test Private | 
+            Django Tutorial 4 | 
         
         Bonobono&#39;s Blog
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="bonobono">
     <meta name="description" content="description">
-    <meta name="keywords" content="null,test,hexo">
+    <meta name="keywords" content="null,python,django">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.bonobono.net">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Test Private | Bonobono&#39;s Blog">
+    <meta property="og:title" content="Django Tutorial 4 | Bonobono&#39;s Blog">
     <meta property="og:description" content="description">
-    <meta property="og:article:tag" content="test"> <meta property="og:article:tag" content="hexo"> 
+    <meta property="og:article:tag" content="python"> <meta property="og:article:tag" content="django"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -247,7 +247,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#정적파일-처리"><span class="post-toc-number">1.</span> <span class="post-toc-text">정적파일 처리</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#템플릿-확장"><span class="post-toc-number">2.</span> <span class="post-toc-text">템플릿 확장</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -261,12 +261,16 @@
 
 <!-- Layouts -->
 
-    <!-- Hidden Page -->
+    <!-- Post Module -->
     <div class="material-post_container">
+
         <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-                <!-- Post Header(Thumbnail & Title) -->
-                
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+				
+				
+					<!-- Post Header(Thumbnail & Title) -->
+					
     <!-- Paradox Post Header -->
     
         
@@ -281,7 +285,7 @@
         
     
             <p class="article-headline-p">
-                Test Private
+                Django Tutorial 4
             </p>
         </div>
 
@@ -289,9 +293,9 @@
 
 
 
-                
-                  <!-- Paradox Post Info -->
-                  <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+					
+						<!-- Paradox Post Info -->
+						<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
 
     <!-- Author Avatar -->
     <div id="author-avatar">
@@ -300,7 +304,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>bonobono</strong>
-        <span>2017-03-08</span>
+        <span>2017-04-07</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -324,7 +328,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/hexo/">hexo</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/test/">test</a>
+        <a class="post_tag-link" href="/tags/django/">django</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/python/">python</a>
     </ul>
     
 
@@ -343,7 +347,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Test Private&url=http://www.bonobono.net//test/hexo/test-private/index.html&via=bonobono" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Django Tutorial 4&url=http://www.bonobono.net//python/django/Django-Tutorial-4/index.html&via=bonobono" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -352,7 +356,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.bonobono.net//test/hexo/test-private/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.bonobono.net//python/django/Django-Tutorial-4/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -361,7 +365,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.bonobono.net//test/hexo/test-private/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.bonobono.net//python/django/Django-Tutorial-4/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -380,17 +384,107 @@
 
 </div>
 
-                
+					
 
-                <!-- Post Hidden -->
-                <div id="post-content">
-                    <p>Private post, temporarily hidden</p>
-                </div>
+					<!-- Post Content -->
+					<div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>view에 사용되는 템플릿에 대하여 자세히 보자.</p>
+<h1 id="정적파일-처리"><a href="#정적파일-처리" class="headerlink" title="정적파일 처리"></a>정적파일 처리</h1><p>css, js 등의 정적파일을 처리하는 부분이다..<br>그냥 인클루드하면 되는게 아니었…</p>
+<p>static 파일들은 blog 폴더 아래 static 폴더를 생성하고 그 안에 넣는다.<br>css/blog.css 라는 파일을 생성하고자 한다면 blog/static/css/blog.css 를 생성<br>시험을 위해 임의로 한개만 작성해본다.</p>
+<ul>
+<li>blog/static/css/blog.css</li>
+</ul>
+<pre class=" language-css"><code class="language-css">
+<span class="token selector">h1 a </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#FCA205</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
-                
+<p>앞서 만든 템플릿파일에 적용하기 위해서 post_list.html 파일 상단에 다음과 같이 추가하고 css 파일을 추가</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+{% load staticfiles %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% static <span class="token punctuation">'</span>css/blog.css<span class="token punctuation">'</span> %}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/css/prism.css<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Django Girls Blog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+    {% for post in posts %}
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>published: {{ post.published_date }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{ post.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>{{ post.text|linebreaksbr }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+	{% endfor %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
 
+
+<p>페이지를 확인해보면 아래와 같이 CSS가 적용되어 보이게 된다.</p>
+<img src="/python/django/Django-Tutorial-4/01_static.png" alt="01_static.png" title="">
+<p>페이지 소스보기를 해 보면 /static/css/blog.css가 인클루드 되어 있다는…<br>blog 자체가 루트부터 먹어 들어가니 이렇게 되어 있는거 같긴 한데..<br>다른 App을 만들어보지 않았으니 확실히는 모르겠다.. 그냥 코딩해도 될거 같긴 한데 말이지..</p>
+<img src="/python/django/Django-Tutorial-4/02_source.png" alt="02_source.png" title="">
+<h1 id="템플릿-확장"><a href="#템플릿-확장" class="headerlink" title="템플릿 확장"></a>템플릿 확장</h1><p>JSP에서 인클루드 하듯이 여기도 템플릿을 통해서 구성이 가능한거 같다..<br>근데 구조는 반대라는..</p>
+<p>방금 만든 post_list.html 의 알맹이부분을 남기고 남은 부분을 확장하여 사용 가능하다.<br>예를 들면..</p>
+<p>껍데기 파일을 새로 base.html 이라는 녀석을 만들고 아래와 같이 작성한다.</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+{% load staticfiles %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% static <span class="token punctuation">'</span>css/blog.css<span class="token punctuation">'</span> %}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Django Girls Blog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    {% block content %}
+	{% endblock %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+
+<p>기존 post_list.html 파일은 아래와 같이 작성</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	{% for post in posts %}
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>published: {{ post.published_date }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{ post.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>{{ post.text|linebreaksbr }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+	{% endfor %}
+{% endblock %}
+</code></pre>
+
+<p>앞서 만들었던 페이지와 동일한 결과가 보이게 된다.</p>
+<img src="/python/django/Django-Tutorial-4/01_static.png" alt="01_static.png" title="">
+<p>여기에 남은 내용들 다 때려 넣으려 했는데.. 다음으로 넘겨야겠네..<br>문서를 볼수록 음… 뭔가 계속 어색하다…..;;;;;</p>
+
+    
+
+    
+</div>
+
+
+					
+				
+				
                 <!-- Post Comments -->
                 
+                    
 
 
     <div id="disqus-comment">
@@ -398,7 +492,7 @@
 <script>
     queue.offer(function() {
             var disqus_config = function () {
-                this.page.url = 'http://www.bonobono.net/test/hexo/test-private/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.url = 'http://www.bonobono.net/python/django/Django-Tutorial-4/index.html';  // Replace PAGE_URL with your page's canonical URL variable
                 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
@@ -422,19 +516,12 @@
 
 
 
+                
             </div>
 
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
-    
-        <a href="/test/hexo/test-asset/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
     
 
     <!-- Section Spacer -->
@@ -442,7 +529,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/test/hexo/test-tag-cloud/" id="post_nav-older" class="next-content">
+        <a href="/python/django/Django-Tutorial-3/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -454,7 +541,6 @@
 
         </div>
     </div>
-
 
 
 

@@ -10,7 +10,7 @@
     
     <title>
         
-            Django Tutorial 3 (작성중) | 
+            Django Tutorial 3 | 
         
         Bonobono&#39;s Blog
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.bonobono.net">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Django Tutorial 3 (작성중) | Bonobono&#39;s Blog">
+    <meta property="og:title" content="Django Tutorial 3 | Bonobono&#39;s Blog">
     <meta property="og:description" content="description">
     <meta property="og:article:tag" content="python"> <meta property="og:article:tag" content="django"> 
 
@@ -247,7 +247,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#배포"><span class="post-toc-number">1.</span> <span class="post-toc-text">배포</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#정적파일-모으기"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">정적파일 모으기</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#urls"><span class="post-toc-number">2.</span> <span class="post-toc-text">urls</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#View"><span class="post-toc-number">3.</span> <span class="post-toc-text">View</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#배포"><span class="post-toc-number">1.</span> <span class="post-toc-text">배포</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#정적파일-모으기"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">정적파일 모으기</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#urls"><span class="post-toc-number">2.</span> <span class="post-toc-text">urls</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#View"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">View</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -285,7 +285,7 @@
         
     
             <p class="article-headline-p">
-                Django Tutorial 3 (작성중)
+                Django Tutorial 3
             </p>
         </div>
 
@@ -347,7 +347,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Django Tutorial 3 (작성중)&url=http://www.bonobono.net//python/django/Django-Tutorial-3/index.html&via=bonobono" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Django Tutorial 3&url=http://www.bonobono.net//python/django/Django-Tutorial-3/index.html&via=bonobono" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -389,9 +389,9 @@
 					<!-- Post Content -->
 					<div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>이때 갑자기 나오는 배포… ㄷㄷㄷㄷㄷㄷㄷㄷ</p>
-<p>장고걸스 튜터리얼이 적응이 잘 안되네…<br>장고 사이트에 있는 튜토리얼상으로는 뷰가 먼저인듯한데…<br>뭐 여튼 </p>
-<h1 id="배포"><a href="#배포" class="headerlink" title="배포"></a>배포</h1><p>여튼 해당 내용은 패스…<br>다만 static 파일을 별도로 꺼내오는 부분이 있어 이 부분만 잠깐 언급하자면..</p>
+        <p>이번편은 배포와 View 생성에 대해서 정리한다.<br>배포는 뜬금포로 나오는데 자세한건 생략하고 앞에서 모델을 구성하였으니 urls, View를 설정한다.</p>
+<h1 id="배포"><a href="#배포" class="headerlink" title="배포"></a>배포</h1><p>자세한 내용은 생략한다.<br>생략하는 이유는 로컬의 소스를 git으로 올리고.. 이것을 다시 외부서버에 올려서 그것을 오픈하는 내용인데<br>나와는 상관 없는것도 있고.. 일반적이지는 않은거 같다…</p>
+<p>여튼 해당 내용은 패스…<br>다만 static 파일을 별도로 꺼내오는 부분이 있어 이 부분만 잠깐 언급하자면..</p>
 <h2 id="정적파일-모으기"><a href="#정적파일-모으기" class="headerlink" title="정적파일 모으기"></a>정적파일 모으기</h2><p>정적인 파일을 별도의 static 폴더로 뺄 수 있는 기능인듯하다..</p>
 <p>python manage.py collectstatic 으로 동작</p>
 <pre>
@@ -399,8 +399,91 @@
 </pre>
 
 <p>실행하면 정적 파일들을 static 폴더에 쭉 뽑아낸다..<br>웹서버로 보내기 위한 용도인거 같은데 자세한건 나중에 보면 알겠지..</p>
-<p>================================================<br>이후 마저 작성예정…</p>
-<h1 id="urls"><a href="#urls" class="headerlink" title="urls"></a>urls</h1><h1 id="View"><a href="#View" class="headerlink" title="View"></a>View</h1>
+<h1 id="urls"><a href="#urls" class="headerlink" title="urls"></a>urls</h1><p>mysite/urls.py를 열어서 원하는 경로를 추가한다.<br>mysite가 가장 기본이되는 곳이므로 이곳으로부터 출발하게 되는것 같다.</p>
+<p>url은 regex를 사용하여도 되는데 유의할점은 regex 앞에 r을 추가해줘야 한다는거..<br>문자열 안에 특수문자가 있다는걸 알려주는 용도이다.</p>
+<ul>
+<li>mysite/urls.py</li>
+</ul>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> include<span class="token punctuation">,</span> url
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    url<span class="token punctuation">(</span>r<span class="token string">'^admin/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span>admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    url<span class="token punctuation">(</span>r<span class="token string">''</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">'blog.urls'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+
+<p>모든거에 대해서 blog 밑에 있는 urls를 담겠다는 뜻인듯하고..<br>이후에 blog 폴더밑에 urls.py를 생성하여 아래와 같이 추가</p>
+<ul>
+<li>blog/urls.py</li>
+</ul>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>urls <span class="token keyword">import</span> url
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    url<span class="token punctuation">(</span>r<span class="token string">'^$'</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>post_list<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'post_list'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+
+<p>^$ 라고 정의하면 아무것도 매칭되지 않는다는 뜻이니 루트로 접속한 경우에 post_list 라는 녀석을 보여라라는 뜻이된다.</p>
+<h2 id="View"><a href="#View" class="headerlink" title="View"></a>View</h2><p>경로를 정의했으면 이에 매핑되는 뷰를 생성한다.<br>모델에서 정보를 받아와서 결과를 템플릿에 전달하는 역할을 하게 되는데 blog/views.py에서 정의 해준다.</p>
+<ul>
+<li>blog/views.py</li>
+</ul>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+
+<span class="token keyword">def</span> <span class="token function">post_list</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'blog/post_list.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+
+<p>blog/post_list.html 이라는 녀석이 있어야 하는데 이 파일은 blog/templates/blog 폴더를 생성하고 post_list.html을 작성하도록 한다.</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+Hello post_list.html
+</code></pre>
+
+<img src="/python/django/Django-Tutorial-3/01_views.png" alt="01_views.png" title="">
+<p>Post에 있는 데이터를 가져오는 쿼리셋을 추가<br>쿼리셋은 별도로 뒤에 다룰거다.. 지금은 동작 맛보기이므로 패스~~</p>
+<ul>
+<li>blog/views.py</li>
+</ul>
+<pre class=" language-python"><code class="language-python">
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>utils <span class="token keyword">import</span> timezone
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Post
+
+
+<span class="token keyword">def</span> <span class="token function">post_list</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    posts <span class="token operator">=</span> Post<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>filter<span class="token punctuation">(</span>create_date__lte<span class="token operator">=</span>timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">'-create_date'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'blog/post_list.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'posts'</span><span class="token punctuation">:</span> posts<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+
+<p>디비에서 posts라는 딕셔너리로 값을 담아서 html에 전달하면 html에서는 해당 값을 꺼내 쓴다.</p>
+<ul>
+<li>blog/templates/blog/post_list.html</li>
+</ul>
+<pre class=" language-html"><code class="language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Django Girls Blog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+{% for post in posts %}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>published: {{ post.published_date }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{ post.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>{{ post.text|linebreaksbr }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+{% endfor %}
+</code></pre>
+
+<p>다시 페이지 접속하면 목록이 create_date 역순으로 출력되었다.</p>
+<img src="/python/django/Django-Tutorial-3/02_list.png" alt="02_list.png" title="">
+
     
 
     
@@ -450,6 +533,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/python/django/Django-Tutorial-4/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
     
 
     <!-- Section Spacer -->
@@ -573,7 +664,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/django/">django<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/test/">test<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/test/hexo/">hexo<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/django/">django<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/test/">test<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/test/hexo/">hexo<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
@@ -593,7 +684,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/04/">April 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">8</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">April 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">March 2017<span class="sidebar_archives-count">8</span></a>
             </ul>
         </li>
         
